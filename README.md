@@ -13,7 +13,7 @@
 
 
 
-# RELEASE NOTES - Miniseq.jar
+## RELEASE NOTES - Miniseq.jar
 
 Miniseq.jar is a piece of java software that allows the playback of several
 midi sequences through a single midi output, simultaneously.
@@ -33,10 +33,9 @@ with
 
 
 ## PROGRAMMATIC EXTENSION
-=================================
 
 ### JAVA
----------------------------------
+
 Please View the source files in package miniseq.
 
 For a quick test, do the following steps in java:
@@ -53,7 +52,7 @@ them when requested.
 
 
 ### OTHER LANGUAGES
----------------------------------
+
 Class miniseq/Main includes a simple tcp server application for programmatic
 extension.  You can start the server by running:
 
@@ -82,7 +81,7 @@ java -cp Miniseq.jar miniseq/Main -client 12345
 
 
 ## UNDERSTANDING .seq SONG FORMAT
-=================================
+
 Miniseq comes with its own human-readable midi format, .seq.  An ingenious
 format was chosen for two purposes: firstly, when midi is used to play
 different kinds of effects of variable length, .midi resource files are
@@ -98,7 +97,7 @@ events or comments - you should consider using UTF-8 as source file encoding.
 
 
 ## PARTS
----------------------------------
+
 A .seq file consists of lines of notes.  A linefeed (hex 0x10) starts a new line.
 Each line is treated as a track of midi data.  General midi channels are indexed
 from 1 to 16; miniseq takes the programmatic point of view and indexes the same
@@ -150,7 +149,7 @@ middle octave.
 
 
 ## NOTES
----------------------------------
+
 Notes are expressed in a modified European notation, where notes
 c,d,e,f,g,a are commonly understood, h is one tone higher than a (in US
 notation, b), and b is flattened h.  Sharpening a note is done by postfixing
@@ -195,14 +194,14 @@ offset volume by given amount.
 
 
 ## STOPS
----------------------------------
+
 Where no note should be played, a stop is indicated with the letter . and
 possible length modifiers.  .E means a quarter note stop, .C a stop for a whole
 note - being the same as .... or .*4
 
 
 ## OTHER COMMANDS
----------------------------------
+
 ### TEMPO t
 
 Playback tempo can be set in bpm, in the beginning of a sequence or in the
@@ -291,7 +290,7 @@ R01
 
 
 ## EXAMPLE SEQUENCES
----------------------------------
+
 ```
 t170 .B t100 . t170
         V08 R61cIc#6IaGR R62g#6GdHR .C  !*B0A=00>7F,2,8 N61*18 . N61*18 . N61*18
